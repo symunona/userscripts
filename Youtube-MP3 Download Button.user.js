@@ -31,8 +31,8 @@ function addButton(caption, clickFunction){
 }
 
 function youtubemp3(){
-    var url = 'http://youtube-mp3.org/#' + videoUrl;    
-    var win = unsafeWindow.ytdl = window.open(url,'','width=,height=,resizable=no');    
+    var url = 'http://youtube-mp3.org/#' + videoUrl;
+    var win = unsafeWindow.ytdl = window.open(url,'','width=400px,height=300px');
     win.blur();
     unsafeWindow.focus();
 }
