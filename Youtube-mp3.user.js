@@ -46,10 +46,10 @@
                     console.log($('#dl_link').children().get(2));
                     $('#dl_link').children().get(2).click();
                     setTimeout(window.close,3000);
-                }, 500);
+                }, 15000);
             });
         }
-    },500);
+    },5000);
 
 })();
 
