@@ -10,7 +10,11 @@
 // ==/UserScript==
 
 (function() {
-    'use strict';    
+    'use strict'; 
+    
+    var timeBeforeRedirectToUrlParam = 500;
+    var timeBeforeDownloadPressed = 10000;
+    
     var observeDOM = (function(){
         var MutationObserver = window.MutationObserver || window.WebKitMutationObserver,
             eventListenerSupported = window.addEventListener;
@@ -46,10 +50,10 @@
                     console.log($('#dl_link').children().get(2));
                     $('#dl_link').children().get(2).click();
                     setTimeout(window.close,3000);
-                }, 15000);
+                }, timeBeforeDownloadPressed);
             });
         }
-    },5000);
+    }, timeBeforeRedirectToUrlParam);
 
 })();
 
